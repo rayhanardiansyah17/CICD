@@ -77,7 +77,7 @@ pipeline {
         stage('Push Docker Image to GHCR') {
             steps {
                 script {
-                    sh 'docker push ghcr.io/rayhanardiansyah/cicdtest:latest'
+                    sh 'docker push ghcr.io/rayhanardiansyah17/cicdtest:latest'
                 }
             }
         }
@@ -90,7 +90,7 @@ pipeline {
                     sh 'docker rm nginx-website || true'
                     
                     // Optional: Remove the local Docker image
-                    sh 'docker rmi ghcr.io/rayhanardiansyah/cicdtest:latest || true'
+                    sh 'docker rmi ghcr.io/rayhanardiansyah17/cicdtest:latest || true'
                 }
             }
         }
