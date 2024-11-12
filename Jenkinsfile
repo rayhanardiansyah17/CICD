@@ -33,7 +33,7 @@ pipeline {
                     '''
                     
                     // Run the Flask app container in detached mode
-                    sh 'docker run -d --network host -p 80:80 --name nginx-website ghcr.io/rayhanardiansyah17/cicdtest:latest'
+                    sh 'docker run -d --network host -p 8080:80 --name nginx-website ghcr.io/rayhanardiansyah17/cicdtest:latest'
                     
                     // Wait for Flask app to start up and be ready
                     sleep 5 // Increase wait time for Flask app startup
